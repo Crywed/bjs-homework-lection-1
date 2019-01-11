@@ -21,6 +21,6 @@ console.log(averageScore);
 // Третье задание
 
 let name = 'Mary';
-let message = 'Hello, World! My name is ';
+let message = `Hello, World! My name is ${name}.`;
 
-console.log(message + `${name}` + ".");
+console.log(message);
