@@ -1,4 +1,4 @@
-
+"use strict"
 
 function calculateQuadraticEquation(){
     let a = +window.a.value;
@@ -11,9 +11,16 @@ function calculateQuadraticEquation(){
 }
 
 function getResult(a,b,c){
-    // код для задачи №1 писать здесь
-    //return x;
+  let D = (b * b) - (4 * a * c);
+  if (D < 0) {
+    console.log("корней нету");
+  } else if (D == 0) {
+    console.log("имеет 1 решение");
+  } else if (D > 0) {
+    console.log(D);
+  }
 }
+getResult(2, 4, -3);
 
 function calculateDrinkTask(){
     let name = window.personName.value;
@@ -23,10 +30,16 @@ function calculateDrinkTask(){
 }
 
 function askDrink(name,dateOfBirthday){
-    // код для задачи №2 писать здесь
-    //console.log(result)
-    //return result;
+  let now = new Date().getFullYear();
+  let age = now - dateOfBirthday;
+  console.log(`Возраст: ${age} лет`);
+  if (age < 18) {
+    console.log(`Сожалею, ${name}, но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`);
+  } else {
+    console.log(`Не желаете ли олд-фэшн, ${name}?`);
+  }
 }
+askDrink("Петя", 2002);
 
 function calculateAverageRating(){
     let marks = window.marks.value.split("").map(Number);
@@ -37,4 +50,4 @@ function calculateAverageRating(){
 function getAverageMark(marks){
     // код для задачи №3 писать здесь
     //return averageMark;
-}
+}  //НЕ СМОГ РЕШИТЬ ЗАДАЧУ
